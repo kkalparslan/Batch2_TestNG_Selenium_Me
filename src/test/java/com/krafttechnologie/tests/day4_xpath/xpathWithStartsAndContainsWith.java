@@ -15,6 +15,7 @@ public class xpathWithStartsAndContainsWith {
         searchbox.sendKeys("Selenium");
         WebElement searchbtn=driver.findElement(By.xpath("//div[contains(@class,'SearchBoxOld-cH')]"));
         searchbtn.click();
+        driver.quit();
 
 
     }

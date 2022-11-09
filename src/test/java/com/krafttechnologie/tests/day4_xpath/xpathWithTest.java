@@ -13,7 +13,9 @@ public class xpathWithTest {
 
        // String text=driver.findElement(By.xpath("//li[text()='All Users Profile'] ")).getText();
        // String text=driver.findElement(By.xpath("//li[.='All Users Profile'] ")).getText();
-        String text=driver.findElement(By.xpath("//*[text()='All Users Profile'] ")).getText();
+       // String text=driver.findElement(By.xpath("//*[text()='All Users Profile'] ")).getText();
+        String text=driver.findElement(By.xpath("//*[.='All Users Profile'] ")).getText();
         System.out.println("text = " + text);
+        driver.quit();
     }
 }

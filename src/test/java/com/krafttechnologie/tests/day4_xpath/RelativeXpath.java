@@ -12,6 +12,7 @@ public class RelativeXpath {
 
         String text=driver.findElement(By.xpath("(//a[@href='https://www.hepsiburada.com/cozummerkezi'])[1]")).getText();
         System.out.println("text = " + text);
+        driver.quit();
 
     }
 }

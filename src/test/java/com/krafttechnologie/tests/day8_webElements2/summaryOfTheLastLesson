@@ -1,0 +1,18 @@
+TestNG Nedir?
+Unit test yapılan bir framework
+Testlerimizi toplu veya opsiyonel olarak test etmemize yardımcı olur
+Assertions yapmamaıza imkan verir
+Raporlama yapmamıza imkan verir
+Verify yapmamızı sağlar.
+Bir class içerisinde birden fazla test yapabiliriz
+
+Assetions
+**assertTrue()
+assertTrue(1==1)
+
+**assertFalse()
+assertFalse(2>8)
+
+**assertEquals()
+assertEquals(1,1)
+
