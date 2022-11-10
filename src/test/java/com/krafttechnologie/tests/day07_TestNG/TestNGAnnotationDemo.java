@@ -34,15 +34,26 @@ public class TestNGAnnotationDemo {
 
         Assert.assertTrue(actualTitle.contains(expectedTitle),"hatanın sebebi");
     }
-
     @Test
     public void test4(){
+        // verify that contains @ sign
         String email="kraftTech@gmail.com";
 //        if (email.contains("@")){
 //            System.out.println("PASS");
-//        }else {
+//        }else{
 //            System.out.println("FAILED");
 //        }
+        Assert.assertTrue(email.contains("@"));
+    }
+
+    @Test
+    public void test5(){
+        Assert.assertFalse(0>1,"verify that = is not greater than 1");
+    }
+
+    @Test
+    public void test6(){
+        Assert.assertNotEquals("two","one");
     }
 
     @AfterMethod
