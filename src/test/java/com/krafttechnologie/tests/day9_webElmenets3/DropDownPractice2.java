@@ -10,40 +10,44 @@ import org.testng.annotations.Test;
 
 import java.util.List;
 
-public class DropDownPractice3 {
-    /*
-    1. go to http://webdriveruniversity.com/Dropdown-Checkboxes-RadioButtons/index.html
-    2. Radio Button  kutusundaki elementlerin sayisini bul ve tum elementleri yazdir
-    3. Blue elementini sec
-        */
+public class DropDownPractice2 {
+    /**
+     *  1. go to http://webdriveruniversity.com/Dropdown-Checkboxes-RadioButtons/index.html
+     *  2. Checkboxes kutusundan sadece option 1  ve 4 u sec
+     */
+
+
     WebDriver driver;
+
     @BeforeMethod
     public void setUp() {
         driver = WebDriverFactory.getDriver("chrome");
         driver.manage().window().maximize();
     }
+
     @AfterMethod
     public void tearDown() {
         driver.close();
     }
+
     @Test
     public void test() throws InterruptedException {
         driver.get("http://webdriveruniversity.com/Dropdown-Checkboxes-RadioButtons/index.html");
+        List<WebElement> Options=driver.findElements(By.xpath("//input[@type='checkbox']"));
+        Thread.sleep(2000);
 
-        List<WebElement> radioButtons= driver.findElements(By.xpath("//input[@type='radio'] [@name='color']"));
-        System.out.println("radioButtons.size() = " + radioButtons.size());
-        radioButtons.get(2).click();
-        Thread.sleep(3000);
-        for (WebElement radio: radioButtons){
-            System.out.println("radio.getAttribute(\"value\") = " + radio.getAttribute("value"));
+        if(!Options.get(0).isSelected()){
+            Options.get(0).click();
+            Thread.sleep(1000);
+        }if(!Options.get(3).isSelected()){
+            Options.get(3).click();
+            Thread.sleep(1000);
+        }if(Options.get(2).isSelected()){
+            Options.get(2).click();
+            Thread.sleep(1000);
         }
-        WebElement blue= driver.findElement(By.xpath("//input[@value='blue']"));
-        blue.click();
-        Thread.sleep(1000);
+
     }
 
 }
-
-
-
 
