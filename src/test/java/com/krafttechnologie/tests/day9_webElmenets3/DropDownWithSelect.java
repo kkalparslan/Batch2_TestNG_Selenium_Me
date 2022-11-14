@@ -9,31 +9,27 @@ import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
 public class DropDownWithSelect {
     WebDriver driver;
-
     @BeforeMethod
     public void setUp() {
         driver = WebDriverFactory.getDriver("chrome");
         driver.manage().window().maximize();
     }
-
     @AfterMethod
     public void tearDown() {
-        driver.close();
+        driver.quit();
     }
-
     @Test
     public void test() throws InterruptedException {
         driver.get("https://demoqa.com/select-menu");
 
         // 1. dropdown ı diğer elementeler gibi locate ediyoruz.
         WebElement dropdownElement=driver.findElement(By.cssSelector("#oldSelectMenu"));
-        // 2. elementi constructor gibi atayarak selenium classından bir obje olusturuyoeuz
 
-        Select selectMenu=new Select(dropdownElement); // burası önemli..element locate ederken tagname
-        // i select ise aşağıdaki kodları kullanıyoruz
+        // 2. elementi constructor gibi atayarak selenium classından bir obje olusturuyoruz
+        Select selectMenu=new Select(dropdownElement); // burası önemli..element locate ederken tagname i select
+        // olanlar için uyguluyoruz select sınıfından obje oluşturmayı
 
         // secilen ilk elementi test edelim
         String expectedOption="Red";
@@ -41,6 +37,7 @@ public class DropDownWithSelect {
         System.out.println("actualOption = " + actualOption);
         Assert.assertEquals(actualOption, expectedOption,"FAIL");
         //-----------------------------------------------------------------
+
         // Dropdown dan diğer options lar nasıl getirilir?
         // 1. select visibleText kullanacağız
         Thread.sleep(2000);
@@ -63,6 +60,7 @@ public class DropDownWithSelect {
         Assert.assertEquals(actualOption,expectedOption,"FAIL");
 
         //-----------------------------------------------------------
+        // 3. value değerine göre çağırıyoruz
         Thread.sleep(2000);
         selectMenu.selectByValue("3");
         expectedOption="Yellow";

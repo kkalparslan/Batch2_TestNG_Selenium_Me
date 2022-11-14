@@ -50,12 +50,10 @@ public class TestNGAnnotationDemo {
     public void test5(){
         Assert.assertFalse(0>1,"verify that = is not greater than 1");
     }
-
     @Test
     public void test6(){
         Assert.assertNotEquals("two","one");
     }
-
     @AfterMethod
     public void tearDown(){
         System.out.println("Close Browser");

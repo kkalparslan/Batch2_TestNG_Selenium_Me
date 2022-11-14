@@ -19,16 +19,19 @@ public class getAttribute {
     }
     @AfterMethod
     public void tearDown(){
-        driver.close();
+        driver.quit();
     }
     @Test
-    public void test(){
+    public void test() throws InterruptedException {
         driver.get("https://demoqa.com/radio-button");
         WebElement yesButton=driver.findElement(By.cssSelector("#yesRadio"));
 
         System.out.println("yesButton.getAttribute(\"type\") = " + yesButton.getAttribute("type"));
         System.out.println("yesButton.getAttribute(\"name\") = " + yesButton.getAttribute("name"));
-       // yesButton.click(); burası kontrol edilecek
+        Thread.sleep(2000);
+        driver.findElement(By.xpath("//label[.='Yes']")).click();
+        Thread.sleep(2000);
+
     }
 
 }

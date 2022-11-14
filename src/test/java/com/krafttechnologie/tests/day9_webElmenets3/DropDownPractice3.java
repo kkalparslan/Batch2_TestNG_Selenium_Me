@@ -11,11 +11,6 @@ import org.testng.annotations.Test;
 import java.util.List;
 
 public class DropDownPractice3 {
-    /*
-    1. go to http://webdriveruniversity.com/Dropdown-Checkboxes-RadioButtons/index.html
-    2. Radio Button  kutusundaki elementlerin sayisini bul ve tum elementleri yazdir
-    3. Blue elementini sec
-        */
     WebDriver driver;
     @BeforeMethod
     public void setUp() {
@@ -26,6 +21,12 @@ public class DropDownPractice3 {
     public void tearDown() {
         driver.close();
     }
+
+    /**
+     * 1. go to http://webdriveruniversity.com/Dropdown-Checkboxes-RadioButtons/index.html
+     *     2. Radio Button  kutusundaki elementlerin sayisini bul ve tum elementleri yazdir
+     *     3. Blue elementini sec
+     */
     @Test
     public void test() throws InterruptedException {
         driver.get("http://webdriveruniversity.com/Dropdown-Checkboxes-RadioButtons/index.html");

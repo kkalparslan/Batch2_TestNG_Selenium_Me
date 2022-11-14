@@ -11,25 +11,20 @@ import org.testng.annotations.Test;
 import java.util.List;
 
 public class DropDownPractice2 {
-    /**
-     *  1. go to http://webdriveruniversity.com/Dropdown-Checkboxes-RadioButtons/index.html
-     *  2. Checkboxes kutusundan sadece option 1  ve 4 u sec
-     */
-
-
     WebDriver driver;
-
     @BeforeMethod
     public void setUp() {
         driver = WebDriverFactory.getDriver("chrome");
         driver.manage().window().maximize();
     }
-
     @AfterMethod
     public void tearDown() {
         driver.close();
     }
-
+    /**
+     *  1. go to http://webdriveruniversity.com/Dropdown-Checkboxes-RadioButtons/index.html
+     *  2. Checkboxes kutusundan sadece option 1  ve 4 u sec
+     */
     @Test
     public void test() throws InterruptedException {
         driver.get("http://webdriveruniversity.com/Dropdown-Checkboxes-RadioButtons/index.html");

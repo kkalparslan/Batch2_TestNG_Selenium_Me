@@ -20,7 +20,7 @@ public class isSelected_RadioButton {
 
     @AfterMethod
     public void tearDown() {
-        driver.close();
+        driver.quit();
     }
 
     @Test
@@ -34,12 +34,16 @@ public class isSelected_RadioButton {
 
         Assert.assertTrue(radioButton1.isSelected(),"FAIL");
         Assert.assertFalse(radioButton2.isSelected(),"FAIL");
+        //isSelected metonu ile elementin secilip secilmedigini assert etmek icin kullaniriz
 
         Thread.sleep(2000);
         radioButton2.click();
+        Thread.sleep(2000);
 
         Assert.assertFalse(radioButton1.isSelected(),"FAIL");
+        //System.out.println("radioButton1.isSelected() = " + radioButton1.isSelected());
         Assert.assertTrue(radioButton2.isSelected(),"FAIL");
+       // System.out.println("radioButton2.isSelected() = " + radioButton2.isSelected());
 
     }
 }

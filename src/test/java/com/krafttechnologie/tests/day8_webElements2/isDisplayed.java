@@ -11,7 +11,6 @@ import org.testng.annotations.Test;
 
 public class isDisplayed {
     WebDriver driver;
-
     @BeforeMethod
     public void setUp(){
         driver= WebDriverFactory.getDriver("chrome");
@@ -21,9 +20,9 @@ public class isDisplayed {
     public void tearDown(){
         driver.close();
     }
-
     @Test
     public void test(){
+        //isDisplayed metodu elementin gorunup gorunmedigini assert etmek icin kullaniriz
         driver.get("https://demoqa.com/automation-practice-form");
         WebElement inputBox=driver.findElement(By.id("firstName"));
         System.out.println(inputBox.isDisplayed());

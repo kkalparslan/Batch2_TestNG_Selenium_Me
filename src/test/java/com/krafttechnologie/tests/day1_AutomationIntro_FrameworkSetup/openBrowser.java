@@ -9,7 +9,7 @@ public class openBrowser {
     public static void main(String[] args) {
   /*
         1. pomxml e yukledigimiz webDriver manager kutuphanesinden chrome u hazir hale getirmesini isteyecegiz
-        2. WebDriver claasindan driver i hazir hale getirmesini isteyecegiz
+        2. WebDriver clasindan driver i hazir hale getirmesini isteyecegiz
         3. driver a testini yapacagimiz web sayfasina bizi gotuemesini isteyecegiz
    */
 

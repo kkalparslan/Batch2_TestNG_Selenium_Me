@@ -34,9 +34,9 @@ public class DropDownWithNoSelect {
         Assert.assertEquals(actualOption, expectedOption, "FAIL");
         Thread.sleep(2000);
 
-        // dROPDOWN İÇERİSİNDEN group 2 option 1 seceneğini cağıralım
-        // buradaki sorunumuz inspect yapmak istediğimizde menü gizleniyor
-        // bunu açmak için events listeners dan blur altındaki öğeler remove edilir
+        // Dropdown içerisinden group 2 option 1 seceneğini cağıralım
+        // buradaki sorunumuz inspect yapmak istediğimizde menünün gizleniyor olmasıdır
+        // bunu aşmak için events listeners tab ından blur altındaki öğeler remove edilir
 
         dropdownMenu.click();
         WebElement group2option1=driver.findElement(By.id("react-select-2-option-1-0"));

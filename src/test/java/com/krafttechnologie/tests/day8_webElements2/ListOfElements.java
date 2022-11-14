@@ -21,13 +21,14 @@ public class ListOfElements {
     }
     @AfterMethod
     public void tearDown(){
-        driver.close();
+        driver.quit();
     }
 
     @Test
     public void test() throws InterruptedException {
         driver.get("https://www.krafttechexlab.com/javascript/clicks");
         List<WebElement> buttons=driver.findElements(By.xpath("//button[@class='btn btn-primary']"));
+        //Ortak attribute ve value sahip elementleri bir liste halinde locate etmemize yarar
         System.out.println("buttons.size() = " + buttons.size());
 
         Assert.assertEquals(buttons.size(),4);
@@ -35,9 +36,13 @@ public class ListOfElements {
         for (WebElement button:buttons) {
             System.out.println("button.getText() = " + button.getText());
             System.out.println("button.isDisplayed() = " + button.isDisplayed());
+            //for each metodu ile tum elementleri tek tek dondurebilir ve yazdirabiliriz
         }
         Thread.sleep(2000);
-      //  buttons.get(2).click(); click yapınca sayfanın url si değiştiğinden yürütünce hata veriyor..
+//        buttons.get(2).click(); //click yapınca sayfanın url si değiştiğinden yürütünce hata veriyor..
+//                                // driver quit yapınca sayfadan çıkabiliyor ve hata vermiyor.
+        //listedeki elementlerden herhangi birini index numarasi ile cagirabiliriz
+//        Thread.sleep(2000);
 
     }
 }

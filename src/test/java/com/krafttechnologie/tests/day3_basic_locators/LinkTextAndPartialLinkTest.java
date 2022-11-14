@@ -39,7 +39,7 @@ public class LinkTextAndPartialLinkTest {
 
         driver.findElement(By.partialLinkText("Example 2: Element rendered after the fact")).click();
         // PartialLinkTest te texti alırken uniqe bir bölümü almak yeterli oluyorken LinkTest te bu
-        // mümkün olmuyor. yani sadece Example 2 yada fact kısmını da alsak sağlıklı olarak locate edilebiliyor.
+        // mümkün olmuyor. yani sadece Example 2 ya da fact kısmını da alsak sağlıklı olarak locate edilebiliyor.
         String expectedText2="Example 2: Element rendered after the fact";
         String actualText2= driver.findElement(By.tagName("h4")).getText();
 
