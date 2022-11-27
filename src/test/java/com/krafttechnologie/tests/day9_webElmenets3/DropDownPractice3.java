@@ -19,7 +19,7 @@ public class DropDownPractice3 {
     }
     @AfterMethod
     public void tearDown() {
-        driver.close();
+        driver.quit();
     }
 
     /**

@@ -27,7 +27,6 @@ public class WebDriverFactory {
                 driver=new FirefoxDriver();
                 break;
         }
-
         return driver;
 
 

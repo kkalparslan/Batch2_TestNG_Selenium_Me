@@ -20,7 +20,6 @@ public class MultipleWindows {
     @AfterMethod
     public void tearDown() throws InterruptedException {
         Thread.sleep(2000);
-       // driver.close();
         driver.quit();
     }
     @Test

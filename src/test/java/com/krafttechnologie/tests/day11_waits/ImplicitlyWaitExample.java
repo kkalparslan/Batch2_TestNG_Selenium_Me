@@ -25,7 +25,7 @@ public class ImplicitlyWaitExample {
     public void tearDown() throws InterruptedException {
         Thread.sleep(2000);
         // driver.close();
-        driver.close();
+        driver.quit();
     }
     @Test
     public void test1(){

@@ -20,7 +20,7 @@ public class PopUpAndAlerts {
     @AfterMethod
     public void tearDown() throws InterruptedException {
         Thread.sleep(2000);
-        driver.close();
+        driver.quit();
     }
     @Test
     public void popUp() throws InterruptedException {

@@ -1,0 +1,46 @@
+JavaScriptExecutor Kisa Calisma Notu:
+
+JavaScriptExecutor, Selenium Webdriver aracılığıyla JavaScript'in yürütülmesine yardımcı olan bir
+Arayüzdür. JavaScriptExecutor, javascript'i seçilen pencerede veya geçerli sayfada çalıştırmak için
+"executescript" ve "executeAsyncScript" olmak üzere iki yöntem sağlar.
+Seleniumda bir web sayfasinda islemler yapmak icin Webdriver kullaniriz. Bunun icinde
+WebElementlerden faydalaniriz. Ancak bazen bunlar ise yaramaz ve islemleri gerceklestiremeyiz.
+Bu durumlarda JavaScriptExecutor kullaniriz. Selenium javascriptexecutor u desteskler extra bir
+sey yuklemeye ihtiyac yoktur.
+Bizim kursumuzda metodlardan executeScript kullanacagiz.
+Temel JavascriptExecutor syntax:
+
+JavascriptExecutor js = (JavascriptExecutor) driver;
+js.executeScript(Script,Arguments);
+Script:Yurutulmesi gereken javascrip.
+Arguments: Komut dosyasinin argumentleri.
+
+Bazi Ornek executeScript ornekleri:
+1. Click yapmak icin
+js.executeScript("arguments[0].click();", button);
+
+2. Input text yapmak icin
+jse.executeScript("arguments[0].setAttribute('value', 'text')",
+firsName);
+
+3. Scroll ve click yapmak icin
+js.executeScript("arguments[0].scrollIntoView(true);"
+ + "arguments[0].click()",button);
+
+4. Web Sayfasinin Title almak icin
+js.executeScript("return document.title;").toString();
+
+5. Web Sayfasinin Domain Name almak icin
+js.executeScript("return document.domain;").toString();
+
+6. Web Sayfasinin URL almak icin
+js.executeScript("return document.URL;").toString();
+
+7. Scroll Down yapmak icin
+ scroll down by 600 pixels
+ js.executeScript("window.scrollBy(0,600)");
+
+8. Scroll Up yapmak icin
+
+9. scroll down by 600 pixels
+ js.executeScript("window.scrollBy(0,-600)");

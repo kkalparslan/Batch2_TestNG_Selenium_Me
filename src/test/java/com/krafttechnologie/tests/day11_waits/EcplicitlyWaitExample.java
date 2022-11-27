@@ -12,10 +12,8 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
-
 public class EcplicitlyWaitExample {
     WebDriver driver;
-
     @BeforeMethod
     public void setUp() {
         driver = WebDriverFactory.getDriver("chrome");
@@ -23,7 +21,6 @@ public class EcplicitlyWaitExample {
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 
     }
-
     @AfterMethod
     public void tearDown() throws InterruptedException {
         Thread.sleep(2000);

@@ -19,7 +19,7 @@ public class DropDownPractice1 {
     }
     @AfterMethod
     public void tearDown() {
-        driver.close();
+        driver.quit();
     }
     /*
     1. go to http://webdriveruniversity.com/Dropdown-Checkboxes-RadioButtons/index.html

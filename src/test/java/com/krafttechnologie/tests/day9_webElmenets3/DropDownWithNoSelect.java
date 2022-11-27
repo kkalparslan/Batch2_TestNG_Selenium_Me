@@ -18,7 +18,7 @@ public class DropDownWithNoSelect {
     }
     @AfterMethod
     public void tearDown() {
-        driver.close();
+        driver.quit();
     }
     @Test
     public void test() throws InterruptedException {

@@ -47,7 +47,7 @@ public class BrowserStackTask {
         clickButton.click();
         Thread.sleep(1000);
 
-        driver.close();
+        driver.quit();
 
 
          }
