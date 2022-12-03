@@ -4,10 +4,6 @@ import com.krafttechnologie.pages.DashboardPage;
 import com.krafttechnologie.pages.LoginPages;
 import com.krafttechnologie.pages.ProfilePage;
 import com.krafttechnologie.tests.TestBase;
-import com.krafttechnologie.utilities.BrowserUtils;
-import com.krafttechnologie.utilities.ConfigurationReader;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -34,9 +30,9 @@ public class VerifyUserInfo extends TestBase {
         extentLogger.info("Login as a user");
         loginPages.loginUser();
 
-        String expectedAccountName="Alican";
+        String expectedAccountName="Alparslan ";
         extentLogger.info("Verify that login is successful and account name is"+expectedAccountName);
-        String actualAccountName=loginPages.getAccountNameMethod(expectedAccountName);
+        String actualAccountName=loginPages.getAccountName_mtd(expectedAccountName);
         //String actualAccount = driver.findElement(By.xpath("//span[.='Alican']")).getText();
         System.out.println("actualAccount = " + actualAccountName);
         System.out.println("expectedAccount = " + expectedAccountName);

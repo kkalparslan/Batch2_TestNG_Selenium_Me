@@ -36,6 +36,8 @@ public class TestBase {
         report =new ExtentReports();
         String projectPath=System.getProperty("user.dir");
         String reportPath=projectPath +"/test-output/report.html";
+//        String date = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());
+//        String reportPath=projectPath +"/test-output/report"+date+".html";
         htmlReporter=new ExtentHtmlReporter(reportPath);
         report.attachReporter(htmlReporter);
         htmlReporter.config().setReportName("KraftTechB2 Smoke Test");

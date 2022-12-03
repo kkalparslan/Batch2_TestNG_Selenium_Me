@@ -35,7 +35,7 @@ public class Actions1 {
     public void doubleClick() throws InterruptedException {
         // Action class ileri düzey etkileşimler sunar
         // doubleclick, drogganddropp, hover, rightclick ... vb
-        // Action class seleniumdan gelri. webdriver constructor gibi parametre olarak atanır.
+        // Action class seleniumdan gelir. webdriver constructor gibi parametre olarak atanır.
         // çünkü driveri browserla etkileşime geçebilmesi için..
         // perform action ı tamamlamak için kullanılır.
 

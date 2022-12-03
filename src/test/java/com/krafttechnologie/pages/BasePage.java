@@ -42,7 +42,7 @@ public abstract class BasePage {
 
     }
 
-    public String getAccountNameMethod(String accountName){
-        return Driver.get().findElement(By.xpath("//span[.='"+accountName+"']")).getText();
+    public String getAccountName_mtd(String accountName){
+        return Driver.get().findElement(By.xpath("//span[text()='"+accountName+"']")).getText();
     }
 }

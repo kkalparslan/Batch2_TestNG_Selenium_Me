@@ -8,6 +8,9 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class ExtentReportDemo {
     //this class is used for starting and building reports
     ExtentReports report;
@@ -26,6 +29,7 @@ public class ExtentReportDemo {
         //create a report path
         String projectPath=System.getProperty("user.dir");
         String reportPath=projectPath +"/test-output/report.html";
+//
 
         //initialize the html report with the reportPath
         htmlReporter=new ExtentHtmlReporter(reportPath);

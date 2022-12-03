@@ -3,7 +3,9 @@
 <suite name="Krafttech Automation" verbose="1">
     <test name="Krafttech Smoke Test">
         <packages>
-            <package name="com.krafttechnologie.tests.*"></package>
+            <package name="com.krafttechnologie.tests.day15_POM1"></package>
+            <package name="com.krafttechnologie.tests.day12_Actions_FileUpload_JSExecuter"></package>
+
         </packages>
 
     </test>

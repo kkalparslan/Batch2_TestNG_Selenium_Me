@@ -15,7 +15,7 @@ public class WebTable {
     public void setUp() {
         driver = WebDriverFactory.getDriver("chrome");
         driver.manage().window().maximize();
-        //driver.get("https://webdriveruniversity.com/Data-Table/index.html");
+        driver.get("https://webdriveruniversity.com/Data-Table/index.html");
             }
     @AfterMethod
     public void tearDown() throws InterruptedException {
