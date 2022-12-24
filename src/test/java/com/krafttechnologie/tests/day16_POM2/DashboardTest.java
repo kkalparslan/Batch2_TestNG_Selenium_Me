@@ -1,20 +1,20 @@
 package com.krafttechnologie.tests.day16_POM2;
 
 import com.krafttechnologie.pages.DashboardPage;
-import com.krafttechnologie.pages.LoginPages;
+import com.krafttechnologie.pages.LoginPage;
 import com.krafttechnologie.tests.TestBase;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class DashboardTest extends TestBase {
 
-    LoginPages loginPages=new LoginPages();
+    LoginPage loginPage =new LoginPage();
     DashboardPage dashboardPage=new DashboardPage();
 
     @Test
     public void navigateToTabAndModule() throws InterruptedException {
 
-        loginPages.loginUser();
+        loginPage.loginUser();
         dashboardPage.navigateToModele("Components", "Charts");
 
         String actualsubtitle= dashboardPage.subTitle("Charts");
@@ -26,7 +26,7 @@ public class DashboardTest extends TestBase {
     @Test
     public void getUser() throws InterruptedException {
 
-        loginPages.loginUser();
+        loginPage.loginUser();
         String actualUser=dashboardPage.UsersNames("Alpcan");
         System.out.println("actualUser = " + actualUser);
         String expectedUser="Alpcan";
@@ -39,7 +39,7 @@ public class DashboardTest extends TestBase {
     @Test
     public void myProfile() throws InterruptedException {
 
-        loginPages.loginUser();
+        loginPage.loginUser();
         dashboardPage.myProfile_loc.click();
 
     }
@@ -47,7 +47,7 @@ public class DashboardTest extends TestBase {
     @Test
     public void aFmTitle(){
 
-        loginPages.loginUser();
+        loginPage.loginUser();
 
         System.out.println("Title = " + dashboardPage.aFmTitle_loc.getText());
 
@@ -56,7 +56,7 @@ public class DashboardTest extends TestBase {
     @Test
     public void copyRight(){
 
-        loginPages.loginUser();
+        loginPage.loginUser();
         System.out.println("dashboardPage.copyRight.getText() = " + dashboardPage.copyRight_loc.getText());
 
     }

@@ -1,6 +1,6 @@
 package com.krafttechnologie.tests.day15_POM1;
 
-import com.krafttechnologie.pages.LoginPages;
+import com.krafttechnologie.pages.LoginPage;
 import com.krafttechnologie.tests.TestBase;
 import com.krafttechnologie.utilities.ConfigurationReader;
 import org.testng.Assert;
@@ -11,13 +11,13 @@ public class NegativeLoginTest extends TestBase {
 
     @Test
     public void wrongPassword() {
-        LoginPages loginPages=new LoginPages();
+        LoginPage loginPage =new LoginPage();
 
         driver.get(ConfigurationReader.get("url"));
 
-        loginPages.userEmailInput_loc.sendKeys(ConfigurationReader.get("userEmail"));
-        loginPages.passwordInput_loc.sendKeys("some password");
-        loginPages.submitButton_loc.click();
+        loginPage.userEmailInput_loc.sendKeys(ConfigurationReader.get("userEmail"));
+        loginPage.passwordInput_loc.sendKeys("some password");
+        loginPage.submitButton_loc.click();
 
 //        WebElement usernameInput = driver.findElement(By.name("email"));
 //        WebElement passwordInput = driver.findElement(By.name("password"));
@@ -37,15 +37,15 @@ public class NegativeLoginTest extends TestBase {
 
     @Test
     public void wrongUsername(){
-        LoginPages loginPages=new LoginPages();
+        LoginPage loginPage =new LoginPage();
         driver.get(ConfigurationReader.get("url"));
 
-        loginPages.userEmailInput_loc.sendKeys("alparslan");
-        loginPages.passwordInput_loc.sendKeys(ConfigurationReader.get("password"));
-        loginPages.submitButton_loc.click();
+        loginPage.userEmailInput_loc.sendKeys("alparslan");
+        loginPage.passwordInput_loc.sendKeys(ConfigurationReader.get("password"));
+        loginPage.submitButton_loc.click();
 
 
-        String actualMessage=loginPages.warningMessage_loc.getText();
+        String actualMessage= loginPage.warningMessage_loc.getText();
         String expectedMessage="Email address or password is incorrect. Please check";
 
         Assert.assertEquals(actualMessage, expectedMessage,"FAIL");

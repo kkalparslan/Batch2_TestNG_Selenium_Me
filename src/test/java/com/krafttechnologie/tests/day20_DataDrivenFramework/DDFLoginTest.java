@@ -1,7 +1,7 @@
 package com.krafttechnologie.tests.day20_DataDrivenFramework;
 
 import com.krafttechnologie.pages.DashboardPage;
-import com.krafttechnologie.pages.LoginPages;
+import com.krafttechnologie.pages.LoginPage;
 import com.krafttechnologie.tests.TestBase;
 import com.krafttechnologie.utilities.ExcelUtil;
 import org.testng.Assert;
@@ -22,10 +22,10 @@ public class DDFLoginTest extends TestBase {
 
     @Test(dataProvider = "userData")
     public void loginTestWithDDF(String email, String password, String YourName){
-        LoginPages loginPages=new LoginPages();
+        LoginPage loginPage =new LoginPage();
         DashboardPage dashboardPage=new DashboardPage();
 
-        loginPages.loginWithParameters(email,password);
+        loginPage.loginWithParameters(email,password);
         String actualName=dashboardPage.getUserName();
         String expectedName=YourName;
 

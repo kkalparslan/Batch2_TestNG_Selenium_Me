@@ -1,7 +1,7 @@
 package com.krafttechnologie.tests.day19_reviewAndXmlRunner;
 
 import com.krafttechnologie.pages.DashboardPage;
-import com.krafttechnologie.pages.LoginPages;
+import com.krafttechnologie.pages.LoginPage;
 import com.krafttechnologie.pages.ProfilePage;
 import com.krafttechnologie.tests.TestBase;
 import org.testng.Assert;
@@ -22,17 +22,17 @@ public class VerifyUserInfo extends TestBase {
          * Verify that Dashboard page with url
          */
 
-        LoginPages loginPages = new LoginPages();
+        LoginPage loginPage = new LoginPage();
         DashboardPage dashboardPage=new DashboardPage();
         ProfilePage profilePage=new ProfilePage();
 
         extentLogger = report.createTest("User Info Verification Test");
         extentLogger.info("Login as a user");
-        loginPages.loginUser();
+        loginPage.loginUser();
 
         String expectedAccountName="Alparslan ";
         extentLogger.info("Verify that login is successful and account name is"+expectedAccountName);
-        String actualAccountName=loginPages.getAccountName_mtd(expectedAccountName);
+        String actualAccountName= loginPage.getAccountName_mtd(expectedAccountName);
         //String actualAccount = driver.findElement(By.xpath("//span[.='Alican']")).getText();
         System.out.println("actualAccount = " + actualAccountName);
         System.out.println("expectedAccount = " + expectedAccountName);

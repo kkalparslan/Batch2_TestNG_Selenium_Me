@@ -81,7 +81,8 @@ public class IframeTest {
         driver.switchTo().defaultContent();
         // driver.switchTo().parentFrame().switchTo().parentFrame(); // another way to go grandparent
         driver.switchTo().frame("frame-bottom");
-        System.out.println("driver.findElement(By.tagName(\"Body\")).getText() = " + driver.findElement(By.tagName("Body")).getText());
+        System.out.println("driver.findElement(By.tagName(\"Body\")).getText() = " +
+                driver.findElement(By.tagName("Body")).getText());
     }
 
 }

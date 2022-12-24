@@ -1,7 +1,7 @@
 package com.krafttechnologie.tests.day14_properties_Singleton;
 
 import com.krafttechnologie.pages.DashboardPage;
-import com.krafttechnologie.pages.LoginPages;
+import com.krafttechnologie.pages.LoginPage;
 import com.krafttechnologie.tests.TestBase;
 import com.krafttechnologie.utilities.ConfigurationReader;
 import org.openqa.selenium.By;
@@ -22,7 +22,7 @@ public class LoginTest extends TestBase {
 //        driver.close();
 //    }
 
-    LoginPages loginPages=new LoginPages();
+    LoginPage loginPage =new LoginPage();
     DashboardPage dashboardPage=new DashboardPage();
 
     @Test
@@ -42,7 +42,7 @@ public class LoginTest extends TestBase {
     @Test
     public void loginWithMethod(){
 
-        loginPages.loginUser();
+        loginPage.loginUser();
 
         String actualTitle=dashboardPage.dashboardPageTitle("Dashboard");
         System.out.println("actualTitle = " + actualTitle);

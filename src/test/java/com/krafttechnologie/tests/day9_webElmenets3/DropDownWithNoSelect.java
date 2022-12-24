@@ -1,5 +1,6 @@
 package com.krafttechnologie.tests.day9_webElmenets3;
 
+import com.krafttechnologie.utilities.BrowserUtils;
 import com.krafttechnologie.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -49,7 +50,6 @@ public class DropDownWithNoSelect {
         String expectedOption2="Group 2, option 1";
         String actualOption2=selectOption.getText();
         Assert.assertEquals(actualOption2, expectedOption2, "FAIL");
-
 
     }
 }

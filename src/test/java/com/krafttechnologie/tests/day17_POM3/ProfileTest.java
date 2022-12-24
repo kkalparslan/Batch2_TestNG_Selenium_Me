@@ -1,7 +1,7 @@
 package com.krafttechnologie.tests.day17_POM3;
 
 import com.krafttechnologie.pages.DashboardPage;
-import com.krafttechnologie.pages.LoginPages;
+import com.krafttechnologie.pages.LoginPage;
 import com.krafttechnologie.pages.ProfilePage;
 import com.krafttechnologie.tests.TestBase;
 import com.krafttechnologie.utilities.BrowserUtils;
@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 public class ProfileTest extends TestBase {
     ProfilePage profilePage=new ProfilePage();
     DashboardPage dashboardPage=new DashboardPage();
-    LoginPages loginPages=new LoginPages();
+    LoginPage loginPage =new LoginPage();
     /**
      * https://www.krafttechexlab.com/ sayfasina login olun, MyProfile gidin, Edit Profile Gidin,
      * Admin ve social Network harici tum islemleri yapin sonra save yapin
@@ -20,7 +20,7 @@ public class ProfileTest extends TestBase {
 
     @Test
     public void editProfile(){
-        loginPages.loginUser();
+        loginPage.loginUser();
         dashboardPage.myProfile_loc.click();
         profilePage.profileTabs("Edit Profile");
 
@@ -55,7 +55,7 @@ public class ProfileTest extends TestBase {
 
     @Test
     public void addExperience() throws InterruptedException {
-        loginPages.loginUser();
+        loginPage.loginUser();
         dashboardPage.myProfile_loc.click();
         profilePage.profileTabs("Add Experience");
 

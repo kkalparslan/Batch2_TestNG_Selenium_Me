@@ -24,10 +24,13 @@ public class DropDownWithSelect {
     public void test() throws InterruptedException {
         driver.get("https://demoqa.com/select-menu");
 
-        // 1. dropdown ı diğer elementeler gibi locate ediyoruz.
+        // 1. eğer locate edeceğimiz elementin tag name i select ise; dropdown ı diğer elementeler gibi locate ediyoruz,
+        // aşağıda açıklandığı üzere locate ettiğimiz bu elementi select classından oluşturduğumuz objeye constryctor
+        // olarak atıyoruz. böylece oluşan bu nesne select clasının sunmuş olduğu mehodlar ile diğer açılan sekmelerdeki
+        // seçenekleri seçmemize ve farklı uygulamaları text getirmek gibi sağlamış oluyor.
         WebElement dropdownElement=driver.findElement(By.cssSelector("#oldSelectMenu"));
 
-        // 2. elementi constructor gibi atayarak selenium classından bir obje olusturuyoruz
+        // 2. elementi constructor gibi atayarak selenium (select) classından bir obje olusturuyoruz
         Select selectMenu=new Select(dropdownElement); // burası önemli..element locate ederken tagname i select
         // olanlar için uyguluyoruz select sınıfından obje oluşturmayı
 

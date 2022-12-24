@@ -22,7 +22,6 @@ public class isSelected_ChechedBox {
     public void tearDown(){
         driver.quit();
     }
-
     @Test
     public void test() throws InterruptedException {
         driver.get("https://www.krafttechexlab.com/forms/checkbox");
