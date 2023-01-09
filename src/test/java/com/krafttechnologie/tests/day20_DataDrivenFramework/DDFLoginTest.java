@@ -19,7 +19,6 @@ public class DDFLoginTest extends TestBase {
         String[][] dataArray = qaTeam3.getDataArrayWithoutFirstRow();
         return dataArray;
     }
-
     @Test(dataProvider = "userData")
     public void loginTestWithDDF(String email, String password, String YourName){
         LoginPage loginPage =new LoginPage();

@@ -20,7 +20,6 @@ public class DashboardTest extends TestBase {
         String actualsubtitle= dashboardPage.subTitle("Charts");
         Assert.assertEquals(actualsubtitle, "Charts");
 
-
     }
 
     @Test
@@ -33,7 +32,6 @@ public class DashboardTest extends TestBase {
         System.out.println("expectedUser = " + expectedUser);
 
         Assert.assertEquals(actualUser, expectedUser);
-
     }
 
     @Test

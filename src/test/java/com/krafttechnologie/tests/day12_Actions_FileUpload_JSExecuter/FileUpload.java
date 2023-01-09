@@ -4,6 +4,7 @@ import com.krafttechnologie.utilities.WebDriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -11,20 +12,17 @@ import org.testng.annotations.Test;
 
 public class FileUpload {
     WebDriver driver;
-
     @BeforeMethod
     public void setUp() {
         driver = WebDriverFactory.getDriver("chrome");
         driver.manage().window().maximize();
         // driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
     }
-
     @AfterMethod
     public void tearDown() throws InterruptedException {
         Thread.sleep(2000);
         driver.quit();
     }
-
     @Test
     public void uploadFile() throws InterruptedException {
         //choose file elementini locate ediyoruz
@@ -42,7 +40,6 @@ public class FileUpload {
         String expected="canvas url.docx";
         Assert.assertTrue(actual.contains(expected));
     }
-
     @Test
     public void uploadFile2(){
         /**
@@ -67,6 +64,6 @@ public class FileUpload {
         String actual=testmsj.getText();
         String expected="canvas url.txt";
         Assert.assertTrue(actual.contains(expected));
-
     }
+
 }

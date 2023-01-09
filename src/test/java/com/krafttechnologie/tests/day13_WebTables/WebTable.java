@@ -22,21 +22,18 @@ public class WebTable {
         Thread.sleep(2000);
         driver.quit();
     }
-
     @Test
     public void printTable() throws InterruptedException {
         WebElement table=driver.findElement(By.xpath("//table[@class='table" +
                 " table-light traversal-table']"));
         System.out.println("table.getText() = " + table.getText());
     }
-
     @Test
     public void printAllHeaders() throws InterruptedException {
         WebElement headers=driver.findElement(By.xpath("//table[@class='table" +
                 " table-light traversal-table']/thead"));
         System.out.println("headers.getText() = " + headers.getText());
     }
-
     @Test
     public void printTableSize() throws InterruptedException {
         List<WebElement> thSize=driver.findElements(By.xpath("//table[@class='table" +
@@ -49,7 +46,6 @@ public class WebTable {
                 " table-light traversal-table']//tbody//tr"));
         System.out.println("allRowsWithoutheaders.size() = " + allRowsWithoutheaders.size());
     }
-
     @Test
     public void getRow(){
         WebElement secondRow = driver.findElement(By.xpath("//table[@class='table" +
