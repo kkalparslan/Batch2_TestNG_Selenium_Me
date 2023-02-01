@@ -29,8 +29,7 @@ public class IframeTest {
 
         // how to switch the frame
         // first way using NAME or ID
-        driver.switchTo().frame("mce_0_ifr");
-
+        driver.switchTo().frame("mfr");
         WebElement textArea = driver.findElement(By.cssSelector("#tinymce"));
         textArea.clear();
         Thread.sleep(2000);

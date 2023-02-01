@@ -3,6 +3,16 @@ package com.krafttechnologie.tests.day07_TestNG;
 import org.testng.annotations.*;
 
 public class BeforeAfterMethod {
+    @BeforeSuite
+    public void setUpClass1() {
+        System.out.println("-----Before suite------");
+    }
+
+    @AfterSuite
+    public void setUpClass2() {
+        System.out.println("-----After suite------");
+    }
+
     @BeforeClass
     public void setUpClass() {
         System.out.println("-----Before class------");

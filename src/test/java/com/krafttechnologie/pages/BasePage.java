@@ -5,6 +5,7 @@ import com.krafttechnologie.utilities.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public abstract class BasePage {
@@ -45,4 +46,6 @@ public abstract class BasePage {
     public String getAccountName_mtd(String accountName){
         return Driver.get().findElement(By.xpath("//span[text()='"+accountName+"']")).getText();
     }
+
+
 }

@@ -78,7 +78,7 @@ public class ProfileTest extends TestBase {
         profilePage.jobDescription.sendKeys("Cool workplace");
 
         profilePage.addExperienceBtn.click();
-        BrowserUtils.waitFor(5);
+        BrowserUtils.waitFor(2);
 
 
     }

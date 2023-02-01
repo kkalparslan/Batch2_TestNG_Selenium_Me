@@ -6,7 +6,7 @@ Raporlama yapmamıza imkan verir
 Verify yapmamızı sağlar.
 Bir class içerisinde birden fazla test yapabiliriz
 
-Assetions
+Assertions
 **assertTrue()
 assertTrue(1==1)
 

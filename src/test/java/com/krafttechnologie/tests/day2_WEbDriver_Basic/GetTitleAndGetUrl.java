@@ -13,6 +13,7 @@ public class GetTitleAndGetUrl {
         WebDriverManager.chromedriver().setup();
         WebDriver driver=new ChromeDriver();
 
+
         driver.get("https://www.krafttechnologie.com/");
 
         // getting title with selenium- selenium ile title alma

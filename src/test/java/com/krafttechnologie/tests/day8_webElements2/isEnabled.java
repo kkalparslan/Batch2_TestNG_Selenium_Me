@@ -27,6 +27,10 @@ public class isEnabled {
         driver.get("https://www.krafttechexlab.com/forms/checkbox");
         WebElement checkbox=driver.findElement(By.cssSelector("#gridCheck3"));
 
+//        System.out.println("checkbox.isDisplayed() = " + checkbox.isDisplayed());
+//        System.out.println("checkbox.isEnabled() = " + checkbox.isEnabled());
+//        System.out.println("checkbox.isSelected() = " + checkbox.isSelected());
+
         System.out.println("checkbox.isEnabled() = " + checkbox.isEnabled());
         Assert.assertFalse(checkbox.isEnabled(),"FAIL");
         Thread.sleep(2000);
