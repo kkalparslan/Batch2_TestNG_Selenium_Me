@@ -8,15 +8,14 @@ import org.openqa.selenium.WebElement;
 public class LinkTextAndPartialLinkTest {
     public static void main(String[] args) throws InterruptedException {
 
-        /*
+        /**
         1- https://the-internet.herokuapp.com/dynamic_loading
         2- https://demoqa.com/text-box
         3- https://mvnrepository.com/
         4- https://www.krafttechexlab.com/index
         5- https://demo.aspnetawesome.com/
         6- https://the-internet.herokuapp.com/inputs
-        7-
-         */
+        */
 
         WebDriver driver= WebDriverFactory.getDriver("chrome");
         driver.get("https://the-internet.herokuapp.com/dynamic_loading");

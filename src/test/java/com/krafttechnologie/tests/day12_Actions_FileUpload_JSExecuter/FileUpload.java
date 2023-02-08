@@ -39,6 +39,8 @@ public class FileUpload {
         String actual=testmsj.getText();
         String expected="canvas url.docx";
         Assert.assertTrue(actual.contains(expected));
+        System.out.println("chooseFile.getLocation() = " + chooseFile.getLocation()); // get location methodu
+        // istenilen web elementin sayfadaki locasyonunu getiriyor. Kullanılabilir.
     }
     @Test
     public void uploadFile2(){

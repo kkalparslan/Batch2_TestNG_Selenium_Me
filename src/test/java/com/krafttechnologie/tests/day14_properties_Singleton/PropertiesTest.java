@@ -25,10 +25,5 @@ public class PropertiesTest {
         driver.findElement(By.name("password"))
                 .sendKeys(ConfigurationReader.get("password")
                         + Keys.ENTER);
-
-
-
-
-
     }
 }
