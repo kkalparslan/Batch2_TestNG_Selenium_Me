@@ -38,6 +38,7 @@ public class EcplicitlyWaitExample {
         wait.until(ExpectedConditions.visibilityOf(hello));
         System.out.println("hello.getText() = " + hello.getText());
         Assert.assertEquals(hello.getText(), "Hello World!");
+
     }
     @Test
     public void test2(){

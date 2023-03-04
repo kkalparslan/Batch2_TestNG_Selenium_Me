@@ -61,6 +61,7 @@ public class FileUpload {
         String fullPath=projectPath+"/"+FilePath;
         chooseFile.sendKeys(fullPath);
 
+
         WebElement testmsj=driver.findElement(By.id("uploadedFilePath"));
         System.out.println("testmsj.getText() = " + testmsj.getText());
         String actual=testmsj.getText();

@@ -97,6 +97,7 @@ public class Actions1 {
         Assert.assertEquals(alert.getText(), expected);
         Thread.sleep(2000);
         alert.accept();
+
     }
 
     @Test

@@ -82,6 +82,7 @@ public class IframeTest {
         driver.switchTo().frame("frame-bottom");
         System.out.println("driver.findElement(By.tagName(\"Body\")).getText() = " +
                 driver.findElement(By.tagName("Body")).getText());
+        
     }
 
 }
