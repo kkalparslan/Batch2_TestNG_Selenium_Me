@@ -2,6 +2,7 @@ package com.krafttechnologie.tests.day18_ExtentReport;
 
 import com.krafttechnologie.pages.LoginPage;
 import com.krafttechnologie.tests.TestBase;
+import com.krafttechnologie.utilities.BrowserUtils;
 import com.krafttechnologie.utilities.ConfigurationReader;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -20,9 +21,10 @@ public class WrongUserNameTest extends TestBase {
         loginPage.passwordInput_loc.sendKeys(ConfigurationReader.get("password"));
         extentLogger.info("Click login button");
         loginPage.submitButton_loc.click();
+        BrowserUtils.waitFor(2);
         String actualMessage= loginPage.warningMessage_loc.getText();
         extentLogger.info("Verify that NOT log in");
-        Assert.assertEquals(actualMessage, "Email address or password is incorrect. Please check");
+        Assert.assertEquals(actualMessage, "Email address is incorrect. Please check");
         extentLogger.pass("PASSED");
 
     }

@@ -19,8 +19,5 @@ public class Day_2 {
         WebElement element=driver.findElement(By.linkText("Google'da arama yapın veya bir URL yazın"));
         element.click();
         element.sendKeys("my little pony");
-
-
-
     }
 }

@@ -34,7 +34,7 @@ public class ExtentReportDemo {
         //initialize the html report with the reportPath
         htmlReporter=new ExtentHtmlReporter(reportPath);
 
-        //initialize the html report with the reportPath
+        //attach the html report to the report object
         report.attachReporter(htmlReporter);
 
         //title in report
@@ -50,7 +50,7 @@ public class ExtentReportDemo {
     @Test
     public void test(){
         //give a name to the current test
-        extentLogger=report.createTest("TC000 Login Test");
+        extentLogger=report.createTest("TC001 Login Test");
 
         //Test steps
         extentLogger.info("Open the Browser");

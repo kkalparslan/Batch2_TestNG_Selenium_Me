@@ -33,7 +33,5 @@ public class CallWebDriverFactory {
             System.out.println("FAILED");
         }
         driver.close();
-
-
     }
 }

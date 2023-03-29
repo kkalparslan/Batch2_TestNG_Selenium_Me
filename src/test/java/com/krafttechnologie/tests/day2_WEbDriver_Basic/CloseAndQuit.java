@@ -23,14 +23,8 @@ public class CloseAndQuit {
 
         driver.get("https://www.facebook.com");
 
-
         Thread.sleep(3000);
 
         driver.quit(); // close all tab- bütün tabları /browser ı kapatır
-
-
-
-
-
     }
 }

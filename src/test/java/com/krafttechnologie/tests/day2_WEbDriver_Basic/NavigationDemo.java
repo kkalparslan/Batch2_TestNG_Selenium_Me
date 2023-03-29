@@ -36,6 +36,5 @@ public class NavigationDemo {
 
         //refresh to webpage- sayfayı yenile
         driver.navigate().refresh();
-
     }
 }

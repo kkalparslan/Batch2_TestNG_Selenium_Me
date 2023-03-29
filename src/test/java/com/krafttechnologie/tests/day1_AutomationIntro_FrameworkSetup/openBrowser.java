@@ -16,7 +16,6 @@ public class openBrowser {
 //        WebDriverManager.firefoxdriver().setup();
 //        WebDriver driver=new FirefoxDriver();
 
-
         WebDriverManager.chromedriver().setup();
 
         WebDriver driver=new ChromeDriver();
@@ -35,9 +34,5 @@ public class openBrowser {
         }else {
             System.out.println("Baslik beklendigi gibi GELMEDI. Dogrulama GECMEDI");
         }
-
-
-
-
     }
 }

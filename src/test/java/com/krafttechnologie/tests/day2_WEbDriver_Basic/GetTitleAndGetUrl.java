@@ -13,14 +13,12 @@ public class GetTitleAndGetUrl {
         WebDriverManager.chromedriver().setup();
         WebDriver driver=new ChromeDriver();
 
-
         driver.get("https://www.krafttechnologie.com/");
 
         // getting title with selenium- selenium ile title alma
         String title=driver.getTitle();
 
         System.out.println("title = " + title);
-
 
         // get the url from browser - browserdan url alma
         String currentUrl= driver.getCurrentUrl();
@@ -31,7 +29,5 @@ public class GetTitleAndGetUrl {
         String pageSource=driver.getPageSource();
 
         System.out.println("pageSource = " + pageSource);
-
-
     }
 }
