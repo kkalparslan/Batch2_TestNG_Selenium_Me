@@ -56,5 +56,4 @@ public class ProfilePage extends BasePage {
     public WebElement jobDescription;
     @FindBy(xpath = "//button[@value='experience']")
     public WebElement addExperienceBtn;
-
 }
