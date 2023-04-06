@@ -6,6 +6,7 @@ import com.krafttechnologie.tests.TestBase;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+
 public class DashboardTest extends TestBase {
 
     LoginPage loginPage =new LoginPage();
