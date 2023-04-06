@@ -19,14 +19,10 @@ public class openBrowser {
         WebDriverManager.chromedriver().setup();
 
         WebDriver driver=new ChromeDriver();
-
         driver.get("https://www.krafttechnologie.com/");
         driver.manage().window().maximize();
-
         System.out.println("driver.getTitle() = " + driver.getTitle());
-
         String expectedTitle="Kraft Technologie | Yazılım ve Bilişim Eğitimleri – Uzaktan Canlı Eğitim";
-
         String actualTitle= driver.getTitle();
 
         if (actualTitle.equals(expectedTitle)){
