@@ -27,7 +27,6 @@ public class ProfileTest extends TestBase {
         profilePage.fullName.clear();
         profilePage.fullName.sendKeys("Alican");
 
-
         profilePage.about.clear();
         profilePage.about.sendKeys("some words are here");
 
@@ -50,9 +49,7 @@ public class ProfileTest extends TestBase {
 
         //profilePage.save.click();
         BrowserUtils.clickWithJS(profilePage.save);
-
     }
-
     @Test
     public void addExperience() throws InterruptedException {
         loginPage.loginUser();
@@ -79,7 +76,5 @@ public class ProfileTest extends TestBase {
 
         profilePage.addExperienceBtn.click();
         BrowserUtils.waitFor(2);
-
-
     }
 }
