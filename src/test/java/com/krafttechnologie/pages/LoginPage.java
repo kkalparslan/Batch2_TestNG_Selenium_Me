@@ -6,11 +6,6 @@ import org.openqa.selenium.support.FindBy;
 
 public class LoginPage extends BasePage{
 
-//    public LoginPages() {
-//
-//        PageFactory.initElements(Driver.get(), this);
-//
-//    }
     @FindBy(name = "email")
     public WebElement userEmailInput_loc;
     @FindBy(name = "password")

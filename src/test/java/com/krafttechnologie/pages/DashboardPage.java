@@ -7,7 +7,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class DashboardPage extends BasePage{
-
     @FindBy(xpath = "//h1[.='Dashboard']")
     public WebElement dashboardPageTitle_loc;
     @FindBy(xpath = "(//span[.='</aFm>'])[1]")
@@ -39,7 +38,6 @@ public class DashboardPage extends BasePage{
         String usernameLocator="//h3[.='"+name+"']";
         BrowserUtils.waitForPresenceOfElement(By.xpath(usernameLocator), 5);
         WebElement UserName= Driver.get().findElement(By.xpath(usernameLocator));
-
         String actualName=UserName.getText();
         return actualName;
     }
