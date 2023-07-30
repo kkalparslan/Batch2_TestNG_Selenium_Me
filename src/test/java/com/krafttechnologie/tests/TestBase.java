@@ -46,12 +46,10 @@ public class TestBase {
         report.setSystemInfo("OS", System.getProperty("os.name"));
         report.setSystemInfo("Test Engineer", "Alparslan Öztürk");
     }
-
     @AfterTest
     public void tearDownTest(){
         report.flush();
     }
-
     @BeforeMethod
     public void setUp() {
         driver = Driver.get();
@@ -60,7 +58,6 @@ public class TestBase {
         wait=new WebDriverWait(Driver.get(),15);
         driver.manage().window().maximize();
         actions=new Actions(driver);
-
     }
     @AfterMethod
     public void tearDown(ITestResult result) throws InterruptedException, IOException {
@@ -70,11 +67,8 @@ public class TestBase {
             extentLogger.addScreenCaptureFromPath(screenShotPath);
             extentLogger.fail(result.getThrowable());
         }
-
         Thread.sleep(2000);
         //driver.quit();
         Driver.closeDriver();
-
     }
-
 }
