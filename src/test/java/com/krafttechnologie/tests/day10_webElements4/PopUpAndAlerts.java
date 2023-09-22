@@ -37,23 +37,18 @@ public class PopUpAndAlerts {
         WebElement actualMessage = driver.findElement(By.xpath("//p[text()='You have accepted']"));
 
         Assert.assertEquals(actualMessage.getText(), expectedMessage);
-
     }
     @Test
     public void jsAlert() throws InterruptedException {
         driver.get("https://the-internet.herokuapp.com/javascript_alerts");
         // e.g.:1 click - click for JS Alert
         Thread.sleep(1000);
-
         driver.findElement(By.xpath("//button[text()='Click for JS Alert']")).click();
-
-
         // switch to JS alert pop up
         Alert alert=driver.switchTo().alert();
         Thread.sleep(2000);
         // click OK
         alert.accept();
-
 
         //e.g:2 click - click for JS Confirm
         driver.findElement(By.xpath("//button[text()='Click for JS Confirm']")).click();
@@ -70,7 +65,6 @@ public class PopUpAndAlerts {
         Thread.sleep(4000);
         System.out.println("alert.getText() = " + alert.getText());
         alert.accept();
-
         // Task : verify all result above JS Alert.....alertleri verify edelim
     }
 }

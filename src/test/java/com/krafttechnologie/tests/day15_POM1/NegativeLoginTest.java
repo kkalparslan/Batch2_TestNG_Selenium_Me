@@ -32,9 +32,7 @@ public class NegativeLoginTest extends TestBase {
 //        Assert.assertEquals(warningMessage.getText(),
 //                "Email address or password is incorrect. Please check",
 //                "Verify that user is NOT login");
-
     }
-
     @Test
     public void wrongUsername(){
         LoginPage loginPage =new LoginPage();
@@ -44,11 +42,9 @@ public class NegativeLoginTest extends TestBase {
         loginPage.passwordInput_loc.sendKeys(ConfigurationReader.get("password"));
         loginPage.submitButton_loc.click();
 
-
         String actualMessage= loginPage.warningMessage_loc.getText();
         String expectedMessage="Email address or password is incorrect. Please check";
 
         Assert.assertEquals(actualMessage, expectedMessage,"FAIL");
     }
-
 }

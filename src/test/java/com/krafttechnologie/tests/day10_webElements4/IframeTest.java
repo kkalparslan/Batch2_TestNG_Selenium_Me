@@ -42,7 +42,6 @@ public class IframeTest {
         textArea.clear();
         textArea.sendKeys("Batch 2 was here Two times");
 
-
         driver.switchTo().parentFrame();
         Thread.sleep(2000);
         // third way using WEB ELEMENT
@@ -50,7 +49,6 @@ public class IframeTest {
         driver.switchTo().frame(iframe);
         textArea.clear();
         textArea.sendKeys("This is third way");
-
     }
     @Test
     public void nestedIframe(){
@@ -82,7 +80,5 @@ public class IframeTest {
         driver.switchTo().frame("frame-bottom");
         System.out.println("driver.findElement(By.tagName(\"Body\")).getText() = " +
                 driver.findElement(By.tagName("Body")).getText());
-        
     }
-
 }
