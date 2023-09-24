@@ -68,5 +68,4 @@ public class FileUpload {
         String expected="canvas url.txt";
         Assert.assertTrue(actual.contains(expected));
     }
-
 }

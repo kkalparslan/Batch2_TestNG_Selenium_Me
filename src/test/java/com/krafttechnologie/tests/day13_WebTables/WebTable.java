@@ -99,5 +99,4 @@ public class WebTable {
         System.out.println("title.getText() = " + title.getText());
         Thread.sleep(2000);
     }
-
 }

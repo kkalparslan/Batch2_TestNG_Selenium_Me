@@ -28,5 +28,4 @@ public class ThreadSleepExample {
         WebElement hello = driver.findElement(By.xpath("//h4[text()='Hello World!']"));
         System.out.println("hello.getText() = " + hello.getText());
     }
-
 }

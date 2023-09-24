@@ -13,8 +13,6 @@ public class AnotherLoginTest extends TestBase{
     // enter username
     // enter password
     // click login button
-
-
     @Test
     public void test1(){
         //WebDriver driver=Driver.get();
@@ -22,5 +20,4 @@ public class AnotherLoginTest extends TestBase{
         driver.findElement(By.name("email")).sendKeys(ConfigurationReader.get("userEmail"));
         driver.findElement(By.name("password")).sendKeys(ConfigurationReader.get("password") + Keys.ENTER);
     }
-
 }
