@@ -148,8 +148,5 @@ public class Actions1 {
         String expected="You have done a right click";
         String actual=msj.getText();
         Assert.assertEquals(actual, expected, "FAIL");
-
-
     }
-
 }

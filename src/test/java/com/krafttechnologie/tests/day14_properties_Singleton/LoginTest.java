@@ -36,7 +36,6 @@ public class LoginTest extends TestBase {
                         + Keys.ENTER);
         //actions.
         //wait.until(ExpectedConditions.visibilityOf(locator);
-
     }
 
     @Test
@@ -48,8 +47,5 @@ public class LoginTest extends TestBase {
         System.out.println("actualTitle = " + actualTitle);
         String expectedTitle="Dashboard";
         Assert.assertEquals(actualTitle, expectedTitle);
-
-
     }
-
 }
