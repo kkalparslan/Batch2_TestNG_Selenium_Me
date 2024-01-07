@@ -11,7 +11,6 @@ import org.testng.annotations.Test;
 
 public class isSelected_RadioButton {
     WebDriver driver;
-
     @BeforeMethod
     public void setUp() {
         driver = WebDriverFactory.getDriver("chrome");
@@ -44,6 +43,5 @@ public class isSelected_RadioButton {
         //System.out.println("radioButton1.isSelected() = " + radioButton1.isSelected());
         Assert.assertTrue(radioButton2.isSelected(),"FAIL");
        // System.out.println("radioButton2.isSelected() = " + radioButton2.isSelected());
-
     }
 }

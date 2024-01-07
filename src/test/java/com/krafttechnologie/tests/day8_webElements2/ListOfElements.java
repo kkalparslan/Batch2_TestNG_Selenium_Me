@@ -14,7 +14,6 @@ import java.util.List;
 
 public class ListOfElements {
     WebDriver driver;
-
     @BeforeMethod
     public void setUp(){
         driver= WebDriverFactory.getDriver("chrome");
@@ -45,6 +44,5 @@ public class ListOfElements {
 //                                // driver quit yapınca sayfadan çıkabiliyor ve hata vermiyor. HATA VERMİYOR ASLINDA
         //listedeki elementlerden herhangi birini index numarasi ile cagirabiliriz
 //        Thread.sleep(2000);
-
     }
 }

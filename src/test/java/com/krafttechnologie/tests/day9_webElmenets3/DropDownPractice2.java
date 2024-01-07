@@ -41,8 +41,6 @@ public class DropDownPractice2 {
             Options.get(2).click();
             Thread.sleep(1000);
         }
-
     }
-
 }
 

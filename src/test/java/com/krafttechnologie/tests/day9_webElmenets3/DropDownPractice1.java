@@ -43,7 +43,5 @@ public class DropDownPractice1 {
         Select selectOption3=new Select(dropDownMenu3);
         selectOption3.selectByVisibleText("CSS");
         Thread.sleep(2000);
-
-
     }
 }

@@ -42,8 +42,6 @@ public class DropDownPractice3 {
         blue.click();
         Thread.sleep(1000);
     }
-
-
 }
 
 

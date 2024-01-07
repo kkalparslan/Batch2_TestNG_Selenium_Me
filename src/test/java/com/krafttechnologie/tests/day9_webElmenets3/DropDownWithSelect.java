@@ -72,7 +72,5 @@ public class DropDownWithSelect {
         System.out.println("actualOption = " + actualOption);
 
         Assert.assertEquals(actualOption,expectedOption,"FAIL");
-
     }
-
 }

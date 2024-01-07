@@ -38,6 +38,5 @@ public class isEnabled {
         WebElement checkbox2=driver.findElement(By.cssSelector("#gridCheck1"));
         Assert.assertTrue(checkbox2.isEnabled(),"pass");
         System.out.println("checkbox2.isEnabled() = " + checkbox2.isEnabled());
-
     }
 }

@@ -11,5 +11,4 @@ public class FirstTestNGTest {
     public void test2(){
         System.out.println("My second test case");
     }
-
 }

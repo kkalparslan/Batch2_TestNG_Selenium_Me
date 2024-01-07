@@ -50,6 +50,5 @@ public class DropDownWithNoSelect {
         String expectedOption2="Group 2, option 1";
         String actualOption2=selectOption.getText();
         Assert.assertEquals(actualOption2, expectedOption2, "FAIL");
-
     }
 }

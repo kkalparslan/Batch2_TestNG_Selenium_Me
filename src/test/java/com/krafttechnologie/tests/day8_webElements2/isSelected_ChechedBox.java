@@ -41,9 +41,5 @@ public class isSelected_ChechedBox {
 
         Assert.assertTrue(checkedbox1.isSelected(),"FAIL");
         Assert.assertTrue(checkedbox2.isSelected(),"FAIL");
-
-
-
     }
-
 }
