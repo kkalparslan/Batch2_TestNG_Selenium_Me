@@ -42,5 +42,4 @@ public class ExcelUtilPractice {
         String [][] dataArray= qateam3.getDataArray();
         System.out.println("Arrays.deepToString(dataArray) = " + Arrays.deepToString(dataArray));
     }
-
 }

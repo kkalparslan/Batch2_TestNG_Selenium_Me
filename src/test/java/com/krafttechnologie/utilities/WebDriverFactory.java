@@ -28,18 +28,5 @@ public class WebDriverFactory {
                 break;
         }
         return driver;
-
-
-
-
-
-
     }
-
-
-
-
-
-
-
 }

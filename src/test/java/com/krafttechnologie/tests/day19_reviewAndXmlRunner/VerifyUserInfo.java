@@ -59,9 +59,5 @@ public class VerifyUserInfo extends TestBase {
         Assert.assertEquals(driver.getCurrentUrl()
                 ,"https://www.krafttechexlab.com/index");
         extentLogger.pass("PASSED");
-
-
     }
-
-
 }

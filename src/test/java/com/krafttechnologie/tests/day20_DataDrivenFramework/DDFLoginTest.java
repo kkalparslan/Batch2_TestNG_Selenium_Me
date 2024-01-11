@@ -29,7 +29,5 @@ public class DDFLoginTest extends TestBase {
         String expectedName=YourName;
 
         Assert.assertEquals(actualName, expectedName, "Verify Your Name");
-
     }
-
 }
