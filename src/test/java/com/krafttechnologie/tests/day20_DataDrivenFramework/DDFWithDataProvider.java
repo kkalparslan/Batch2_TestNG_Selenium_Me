@@ -25,7 +25,5 @@ public class DDFWithDataProvider {
     @Test(dataProvider = "AracSatisOranlari")
     public void test(String aracMarkasi, String Ocak, String Subat, String Mart, String Nisan){
         System.out.println("Araç Markası: "+aracMarkasi+" :"+Ocak+", "+Subat+", "+Mart+", "+Nisan+"");
-
     }
-
 }
